@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>Holidays destinations in India | Filters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Holidays destinations in India</h1>
+</header>
+<main>
+<form class="searchForm">
+	<input type="search" placeholder="Search" id="searchBox">
+    <button type="submit"></button>
+</form>
+  <div class="filter"> <a href="#" class="active" data-filter="all">All</a> <a href="#" data-filter="spring">Spring</a> <a href="#" data-filter="summer">Summer</a> <a href="#" data-filter="winter">Winter</a> <a href="#" data-filter="fall">Fall</a> </div>
+  <ul class="boxes">
+    <li data-season="spring"> <img src="img/spring/Thekkady-Kerala.jpg" alt="Thekkady, Kerala">
+      <div class="overlay"> <span class="rating">1<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="spring"><img src="img/spring/Kotgarh-HimachalPradesh.jpg" alt="Kotgarh, Himachal Pradesh">
+      <div class="overlay"> <span class="rating">2<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="spring"><img src="img/spring/Valley of flowers-Uttrakhand.jpg" alt="Valley of flowers, Uttrakhand">
+      <div class="overlay"> <span class="rating">3<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="spring"><img src="img/spring/Coonoor-TamilNadu.jpg" alt="Coonoor, TamilNadu">
+      <div class="overlay"> <span class="rating">4<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="spring"><img src="img/spring/Gangtok-Sikkim.jpg" alt="IGangtok, Sikkim">
+      <div class="overlay"> <span class="rating">5<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="summer"><img src="img/summar/Mahabaleshwar.jpg" alt="Mahabaleshwar, Maharashtra">
+      <div class="overlay"> <span class="rating">1<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="summer"><img src="img/summar/Ooty.jpg" alt="Ooty, Tamil Nadu">
+      <div class="overlay"> <span class="rating">2<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="summer"><img src="img/summar/Darjeeling-WestBengal.jpg" alt="Darjeeling, WestBengal">
+      <div class="overlay"> <span class="rating">3<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="summer"><img src="img/summar/Pahalgam-Kashmir.jpg" alt="Pahalgam, Kashmir">
+      <div class="overlay"> <span class="rating">4<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="summer"><img src="img/summar/Ranikhet.jpg" alt="Ranikhet, Uttarakhand">
+      <div class="overlay"> <span class="rating">5<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="winter"><img src="img/winter/Auli-Uttarakhand.jpg" alt="Auli, Uttarakhand">
+      <div class="overlay"> <span class="rating">1<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="winter"><img src="img/winter/Gulmarg-Kashmir.jpg" alt="Gulmarg, Kashmir">
+      <div class="overlay"> <span class="rating">2<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="winter"><img src="img/winter/Rohtang-pass-Himachalpradesh.jpg" alt="Rohtang Pass, Himachal Pradesh">
+      <div class="overlay"> <span class="rating">3<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="winter"><img src="img/winter/kausani-Uttarakhand.jpg" alt="kausani, Uttarakhand">
+      <div class="overlay"> <span class="rating">4<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="winter"><img src="img/winter/Shimla-Himachalpradesh.jpg" alt="Shimla, Himachal Pradesh">
+      <div class="overlay"> <span class="rating">5<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="fall"><img src="img/fall/Athirapally-Kerala.jpg" alt="Athirapally, Kerala">
+      <div class="overlay"> <span class="rating">1<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="fall"><img src="img/fall/Goa.jpg" alt="Goa">
+      <div class="overlay"> <span class="rating">2<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="fall"><img src="img/fall/Khandala-Maharashtra.jpg" alt="Khandala, Maharashtra">
+      <div class="overlay"> <span class="rating">3<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="fall"><img src="img/fall/Kodaikanal-TamilNadu.jpg" alt="Kodaikanal, Tamil Nadu">
+      <div class="overlay"> <span class="rating">4<i class="star-icon"></i></span> </div>
+    </li>
+    <li data-season="fall"><img src="img/fall/Lonavala-Maharashtra.jpg" alt="Lonavala, Maharashtra">
+      <div class="overlay"> <span class="rating">5<i class="star-icon"></i></span> </div>
+    </li>
+  </ul>
+  <div class="fail-message">No results found</div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+	
+  	$('.filter a').click(function(){
+			var season = $(this).attr('data-filter');
+				
+			$('.filter a').removeClass('active');				
+			$(this).addClass('active');	
+			
+			//console.log(season);
+			
+			    if(season == 'all') {				
+				 		
+				  $('.boxes li').addClass('is-animated').fadeIn();
+				  
+				
+				} else {
+					
+					$('.boxes li').hide();
+					$(".boxes li").filter("[data-season='"+season+"']").addClass('is-animated').fadeIn();
+				}					
+		});
+		
+		$('.boxes li').mouseenter(function(){
+			$('.boxes li .overlay').find('h2').remove();
+			$(this).children('.overlay').append( "<h2></h2>" );
+			var imgVal = $(this).children('img').attr('alt');
+			//console.log(imgVal);
+			$('.boxes li .overlay h2').text(imgVal);
+				
+		});
+		
+		$("button").click(function () {	
+		 var searchBox = $("#searchBox").val();		 
+		 var searchResult = $(".boxes li").filter("[data-season='"+searchBox+"']");
+		 var season = $('.boxes li').attr('data-season');
+		 
+		 console.log(searchBox);
+		 
+		if(searchBox == 'all') {				
+				 		
+				  $('.boxes li').addClass('is-animated').fadeIn();
+				  //$(".filter a").filter("[data-all='"+all+"']").addClass('active');
+				
+				} else {
+					
+					$('.boxes li').hide();
+					
+					searchResult.addClass('is-animated').fadeIn();
+					//$(".filter a").filter("[data-season='"+season+"']").addClass('active');
+					
+									
+				}
+				
+			
+  	  	
+		 //console.log(searchResult);
+		  //console.log(searchBox);
+		 console.log(season);
+	 });
+		
+		
+});
+</script>
+</body>
+</html>
